@@ -1,0 +1,177 @@
+/* Basic styling for the body and overall layout */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', 'sans-serif';
+  background: #222;
+  background-image: url('https://www.saga.co.uk/contentlibrary/saga/publishing/verticals/technology/apps/shutterstock_240459751.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* Styling for the main card */
+.card {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 2em;
+  border-radius: 30px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 1em;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the search area */
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  background: #7c7c7c3f;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+input.search-bar {
+  border: none;
+  outline: none;
+  padding: 0.4em 1em;
+  border-radius: 24px;
+  background: #7c7c7c3c;
+  color: #fff;
+  font-family: inherit;
+  font-size: 105%;
+  width: calc(100% - 100px);
+}
+
+button:hover {
+  background: #7c7c7c86;
+}
+
+/* Temperature and weather information styling */
+h1.temp {
+  margin: 0;
+  margin-bottom: 0.4em;
+  font-size: 3em;
+  font-weight: 300;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  text-transform: capitalize;
+  font-size: 1.2em;
+  margin-left: 8px;
+}
+
+#date {
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+
+.me {
+  font-size: 70%;
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Forecast Section Styles */
+.forecast {
+  margin-top: 20px;
+  color: white;
+}
+
+.forecast h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+/* Grid layout for monthly forecast */
+.forecast-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+/* Individual forecast day card */
+.forecast-day {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.forecast-day:hover {
+  transform: scale(1.05);
+}
+
+.forecast-day .date {
+  font-size: 0.9em;
+  color: #ffeb3b;
+  margin-bottom: 5px;
+}
+
+.forecast-day img {
+  width: 50px;
+  height: 50px;
+}
+
+.forecast-day .temp {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+  color: #fff;
+}
+
+.forecast-day .description {
+  font-size: 0.8em;
+  text-transform: capitalize;
+  color: #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .forecast-container {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .forecast-container {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  }
+
+  .forecast-day img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .forecast-day .temp {
+    font-size: 1em;
+  }
+}
